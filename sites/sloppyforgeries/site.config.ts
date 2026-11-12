@@ -20,7 +20,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English guide to Sloppy Forgeries (Steam AppID 3030560). Playful Systems LLC and ENJOYN GAMES. Planned release 13 Nov 2026, still coming soon on 12 Nov 2026. Competitive painting scored pixel by pixel, plus a free demo. Not affiliated with the developers or Valve.',
   analytics: {
-    gaId: '',
+    gaId: 'G-PLCB333Q7H',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
