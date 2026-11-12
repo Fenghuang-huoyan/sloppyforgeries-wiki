@@ -1,8 +1,7 @@
 /**
  * Adsterra Native Banner, directly after Quick Answer on the homepage and guide pages.
  *
- * This domain does not have a zone yet. Leave the id and script empty.
- * Do not paste a key or host from another game.
+ * Zone and script are this domain's own Get Code. Do not paste a key or host from another game.
  * Adult and sensitive categories stay off. The 404 page does not render a slot.
  */
 export type AdSlotConfig = {
@@ -16,18 +15,18 @@ export type AdSlotConfig = {
 
 const slots = {
   afterQuickAnswer: {
-    id: '',
+    id: '0eeda20b40ae7e947c4c858dbec4c32a',
     format: 'native-banner',
-    scriptSrc: '',
+    scriptSrc: 'https://bauval.org/21/0eeda20b40ae7e947c4c858dbec4c32a',
   },
 } as const satisfies Record<string, AdSlotConfig>;
 
 export const adsConfig = {
   network: 'adsterra' as const,
-  enabled: false,
+  enabled: true,
   invokeBase: '',
   /** Site-wide full script URL. A slot `scriptSrc` overrides this. */
-  scriptSrc: '',
+  scriptSrc: 'https://bauval.org/21/0eeda20b40ae7e947c4c858dbec4c32a',
   containerPrefix: 'container-',
   slots,
 };
