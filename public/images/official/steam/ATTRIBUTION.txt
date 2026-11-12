@@ -1,0 +1,64 @@
+Official Steam store assets for Sloppy Forgeries (AppID 3030560).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 12 Nov 2026.
+Fan site: not affiliated with Playful Systems LLC, ENJOYN GAMES, Valve, or Steam.
+Store page: https://store.steampowered.com/app/3030560/Sloppy_Forgeries/
+Appdetails header and capsule URLs use asset cache t=1794446097.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/library_hero.jpg
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/library_hero_2x.jpg
+
+library-header.jpg
+  Steam library header, 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/library_header.jpg
+
+header.jpg
+  Store header from appdetails header_image, 460x215 (hashed path)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/3eec630946545b5a7df00896cd735c3c110f7c0a/header.jpg?t=1794446097
+  The unhashed header.jpg URL also returned HTTP 200 on 12 Nov 2026 and was a different byte size (39595 vs 48174). It is not a second file in this folder.
+
+capsule-616x353.jpg
+  Store capsule, 616x353. The hashed capsule path returned HTTP 404 for this size on 12 Nov 2026, so this file is the unhashed URL.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/capsule_616x353.jpg
+
+capsule-231x87.jpg
+  Small store capsule, 231x87 (hashed path from appdetails)
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/f85fdad7cadcf7e1e6a43abd7fba5bcad95ec4e7/capsule_231x87.jpg?t=1794446097
+  The unhashed capsule_231x87.jpg URL also returned HTTP 200 and a different byte size (10020 vs 13899).
+
+Screenshots are the 600x338 store thumbnails from appdetails on 12 Nov 2026 (t=1794446097).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+Titles and percents visible in these frames are labels in the store images. They are not a complete painting catalog and not a live leaderboard.
+
+ss-00.jpg
+  Timed round: a framed portrait, a simplified copy, an accuracy label, a timer, and four smaller canvases.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/4b7e133568ec9e992ba2242849d2b33be4be72f8/ss_4b7e133568ec9e992ba2242849d2b33be4be72f8.600x338.jpg?t=1794446097
+
+ss-01.jpg
+  Two-player results for a swirling night-sky painting, with TIME'S UP and a WINNER banner.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/96cd8748756de2ae4f6118fe7b567ef0288703c7/ss_96cd8748756de2ae4f6118fe7b567ef0288703c7.600x338.jpg?t=1794446097
+
+ss-02.jpg
+  Painting picker with Mona Lisa selected.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/307fbb5ea83a54467ccc0cb50cf1341482b01e18/ss_307fbb5ea83a54467ccc0cb50cf1341482b01e18.600x338.jpg?t=1794446097
+
+ss-03.jpg
+  Results comparison for Mona Lisa, with a percent and a letter grade.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/81bd7eda9ff62d8469ebbe367019c224387b6570/ss_81bd7eda9ff62d8469ebbe367019c224387b6570.600x338.jpg?t=1794446097
+
+ss-04.jpg
+  Side-by-side round with grids over two copies of a pearl-earring portrait.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/a590caae1d45664fc594ec1b13c0aabfeba2fa61/ss_a590caae1d45664fc594ec1b13c0aabfeba2fa61.600x338.jpg?t=1794446097
+
+ss-05.jpg
+  Results board with eight ranked rows beside a Mona Lisa reference.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/11e77be939b2b959c4f6f62dace05a0fe641f1a3/ss_11e77be939b2b959c4f6f62dace05a0fe641f1a3.600x338.jpg?t=1794446097
+
+ss-06.jpg
+  In-game leaderboard gallery of simplified geometric paintings with percent labels.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3030560/1d0ce90d6cf1a3c8473514a06f5fad4d65da2f97/ss_1d0ce90d6cf1a3c8473514a06f5fad4d65da2f97.600x338.jpg?t=1794446097

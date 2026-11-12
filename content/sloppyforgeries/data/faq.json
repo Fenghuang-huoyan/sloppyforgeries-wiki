@@ -1,0 +1,42 @@
+[
+  {
+    "q": "When does Sloppy Forgeries release?",
+    "a": "The Steam release_date field on 12 November 2026 is Nov 13, 2026, with coming_soon true. The full game was still upcoming on the day this page was checked. The free demo is a separate app and already has a store date of 18 Oct 2026.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Sloppy Forgeries?",
+    "a": "Steam’s short description calls Sloppy Forgeries a fast-paced competitive painting game. You copy famous paintings with a mouse, under a time limit, with a short list of colors and brush sizes, no undo, and no fill. The score uses every pixel you paint. Genres on the store page are Action and Casual.",
+    "featured": true
+  },
+  {
+    "q": "Is a free Sloppy Forgeries demo available?",
+    "a": "Yes, as of 12 November 2026. The full-game store text says a free demo is available. Demo AppID 5274180 is named Sloppy Forgeries Demo, is_free is true, coming_soon is false, and its release_date is 18 Oct 2026. It is Windows only and points at full game AppID 3030560. This site has not played the demo.",
+    "featured": true
+  },
+  {
+    "q": "Are there Sloppy Forgeries redeem codes?",
+    "a": "No redeem-code list was on the Steam store page or the official site checked on 12 November 2026. The join code in the store text is a session code for an online party. This site does not have a codes page and does not generate join codes.",
+    "featured": true
+  },
+  {
+    "q": "How do you join an online Sloppy Forgeries game?",
+    "a": "The Steam party-mode line says to use a join code to play with up to 7 friends online. The official site, read the same day, says lobbies hold up to 8 people. One store results screenshot shows eight ranked rows. This guide prints both wordings and does not add a ninth seat.",
+    "featured": true
+  },
+  {
+    "q": "How does Sloppy Forgeries score accuracy?",
+    "a": "The store says the score is based on every pixel you paint and that accuracy is measured pixel by pixel in real time. A feedback bar moves up and down as you paint. Store screenshots label a percent “% ACCURACY” and one results frame shows a letter grade. No scoring formula is printed, and this site does not invent one. Percentages inside the store images are not live leaderboard stats.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Sloppy Forgeries?",
+    "a": "Steam lists developer Playful Systems LLC and publishers Playful Systems LLC and ENJOYN GAMES. The official site printed on the store is https://sloppyforgeries.com/. Support URL https://playfulsystems.com/ and support email jonah@playfulsystems.com are the contacts on the store page. This wiki is not affiliated with those companies or with Valve, and it does not read that mailbox.",
+    "featured": true
+  },
+  {
+    "q": "Can I play Sloppy Forgeries on Mac or Linux?",
+    "a": "The full-game appdetails platforms field on 12 November 2026 lists Windows only. Mac and Linux are false. The demo payload says the same. Minimum spec is Windows 7 64-bit with an external mouse. Recommended spec is Windows 10 64-bit, also with an external mouse. The local two-mouse line on the store page carries a Windows-only footnote.",
+    "featured": true
+  }
+]
