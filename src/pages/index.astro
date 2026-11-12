@@ -1,0 +1,267 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  round: '/images/official/steam/ss-00.jpg',
+  versus: '/images/official/steam/ss-01.jpg',
+  picker: '/images/official/steam/ss-02.jpg',
+  result: '/images/official/steam/ss-03.jpg',
+  grid: '/images/official/steam/ss-04.jpg',
+  lobby: '/images/official/steam/ss-05.jpg',
+  board: '/images/official/steam/ss-06.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  guide: art.capsule,
+  painting: art.picker,
+  accuracy: art.result,
+  multiplayer: art.versus,
+  about: art.header,
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'What Sloppy Forgeries is, the 13 Nov 2026 date, the free demo, and the Windows spec Steam printed.',
+    image: art.capsule,
+    alt: 'Official Steam capsule for Sloppy Forgeries, red title over four framed paintings and a brush-shaped figure',
+  },
+  {
+    href: '/painting',
+    num: '02',
+    title: 'Painting',
+    text: 'The clock, the short palette, three brush sizes, no undo, no fill, and the catalog count of 50.',
+    image: art.picker,
+    alt: 'Steam screenshot of the Sloppy Forgeries painting picker with Mona Lisa selected',
+  },
+  {
+    href: '/accuracy',
+    num: '03',
+    title: 'Accuracy',
+    text: 'Pixel-by-pixel scoring, the live bar, and per-painting leaderboards. No invented formula.',
+    image: art.result,
+    alt: 'Steam screenshot comparing a Mona Lisa reference with a simplified copy and an accuracy score',
+  },
+  {
+    href: '/multiplayer',
+    num: '04',
+    title: 'Multiplayer',
+    text: 'An online join code, or two mice on one computer. The join code is a session code.',
+    image: art.lobby,
+    alt: 'Steam screenshot of an eight-player Sloppy Forgeries results board beside a Mona Lisa reference',
+  },
+];
+
+const stills = [
+  {
+    src: art.round,
+    caption: 'Timed round',
+    alt: 'Steam screenshot of a Sloppy Forgeries round: a framed portrait, a simplified copy, an accuracy bar, and a timer',
+  },
+  {
+    src: art.picker,
+    caption: 'Painting picker',
+    alt: 'Steam screenshot of the Sloppy Forgeries catalog picker with Mona Lisa selected',
+  },
+  {
+    src: art.result,
+    caption: 'Results card',
+    alt: 'Steam screenshot of a Mona Lisa result in Sloppy Forgeries, reference beside a copy with a percent and a letter grade',
+  },
+  {
+    src: art.grid,
+    caption: 'Side by side',
+    alt: 'Steam screenshot of two Sloppy Forgeries canvases with grids over a pearl-earring portrait',
+  },
+  {
+    src: art.lobby,
+    caption: 'Eight rows',
+    alt: 'Steam screenshot of eight ranked rows on a Sloppy Forgeries results screen',
+  },
+  {
+    src: art.board,
+    caption: 'Leaderboard gallery',
+    alt: 'Steam screenshot of a Sloppy Forgeries leaderboard gallery of simplified geometric paintings with percent labels',
+  },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with Playful Systems LLC or ENJOYN GAMES</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · planned {meta.release}</p>
+          <h1>Sloppy Forgeries opens on 13 November 2026.</h1>
+          <p class="lede">
+            English pages for the competitive painting game: copy a masterpiece with a mouse, on a clock, and get a score from every pixel.
+            On 12 November 2026 the full game was still marked coming soon. A free demo was still listed that day.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/painting">Painting</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Four doors</h2>
+        <p class="section-intro">
+          Open the guide, the painting limits, the accuracy rule, or the party modes. There is no codes page. The join code on the store is a session code for an online lobby.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt={door.alt} width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Six screenshots from the Steam page. Percents and names inside them are labels in the images, not a live leaderboard and not the full list of 50 paintings.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt={still.alt} width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Sloppy Forgeries is a competitive painting game from Playful Systems LLC, also published with ENJOYN GAMES, on Steam (AppID 3030560). The store date is 13 November 2026. On 12 November 2026 the appdetails payload still marked the full game coming soon, Windows only, and not free. No package price was in that payload.',
+            'You copy famous paintings with a mouse. The store’s limits are a clock, 4–6 colors, three brush sizes, no undo, and no fill. Accuracy is measured pixel by pixel in real time. The catalog count on the store is 50 abstracted paintings.',
+            'A free demo, AppID 5274180, was listed on 12 November 2026. Its own date is 18 October 2026 and coming_soon is false. This site has not played the demo.',
+            'Online play uses a join code for a party, up to 7 friends on the Steam line and up to 8 people on the official site. Local play is two mice on one computer. There is no redeem-code list.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or the official site is labeled with the day it was read. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt={page.data.bannerAlt} width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page, the demo, and the official site live at {siteConfig.databases.map((db, i) => (<><a href={db.href}>{db.label}</a>{i < siteConfig.databases.length - 1 ? ', ' : ''}</>))}. This site is the skim: the painting limits, the pixel score, and the two party modes.
+            </p>
+            <p>
+              The full game is scheduled to unlock on {meta.release}. If the client and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} develops Sloppy Forgeries. The publishers are Playful Systems LLC and ENJOYN GAMES. Platforms on the API: {meta.platforms}. Genres: Action and Casual. The support URL on the store page is https://playfulsystems.com/ and the support email is jonah@playfulsystems.com.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>

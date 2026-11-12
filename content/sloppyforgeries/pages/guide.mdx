@@ -1,0 +1,115 @@
+---
+title: "Sloppy Forgeries Guide — Competitive Painting Overview"
+description: "Sloppy Forgeries guide from the Steam page: competitive painting, the 13 Nov 2026 release, the free demo, pixel scoring, and party modes. No invented stats."
+h1: "A Sloppy Forgeries guide to competitive painting"
+section: "Guide"
+order: 1
+verifiedAgainst: "Steam appdetails for AppID 3030560 and demo AppID 5274180, the English store page, and https://sloppyforgeries.com/, on 12 Nov 2026."
+quickAnswer:
+  - "Sloppy Forgeries is a fast-paced competitive painting game from Playful Systems LLC on Steam (AppID 3030560). Publishers are Playful Systems LLC and ENJOYN GAMES. The store date is 13 Nov 2026. On 12 Nov 2026 the full game was still marked coming soon."
+  - "You copy famous paintings with a mouse, on a clock, with 4–6 colors, three brush sizes, no undo, and no fill. The store says the score uses every pixel and is measured in real time."
+  - "A free demo is listed. Demo AppID 5274180 is free, Windows only, and dated 18 Oct 2026 with coming_soon false. This guide has not played it."
+  - "Party play is an online join code (Steam: up to 7 friends) or two mice on one computer. The join code is a session code. There is no redeem-code list on the pages checked."
+sources:
+  - label: "Steam store — Sloppy Forgeries"
+    url: "https://store.steampowered.com/app/3030560/Sloppy_Forgeries/"
+  - label: "Steam demo — Sloppy Forgeries Demo"
+    url: "https://store.steampowered.com/app/5274180/Sloppy_Forgeries_Demo/"
+  - label: "Official site"
+    url: "https://sloppyforgeries.com/"
+related:
+  - href: "/painting"
+    label: "Painting"
+  - href: "/accuracy"
+    label: "Accuracy"
+  - href: "/multiplayer"
+    label: "Multiplayer"
+banner: "/images/official/steam/capsule-616x353.jpg"
+bannerAlt: "Official Steam capsule for Sloppy Forgeries: the red title above four framed simplified paintings and a smiling brush-shaped figure"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is the overview for **Sloppy Forgeries** before the 13 November 2026 unlock. It stays with the Steam store page, the demo listing, and the official site those pages name. How a round is limited is on [Painting](/painting). What the pixel score does and does not say is on [Accuracy](/accuracy). Online and local party play is on [Multiplayer](/multiplayer).
+
+## What Steam says the game is
+
+The short description on the store:
+
+> Sloppy Forgeries is a fast-paced competitive painting game. Practice your skills by butchering iconic masterpieces in one of the few drawing games that measures accuracy pixel-by-pixel in real-time.
+
+The longer pitch is a list of limits. Copy the Mona Lisa with a mouse in three minutes. The store’s own reply to “that’s impossible” is yes. Then it counts what you get: 4–6 colors, three brush sizes named medium, big, and too big, no undo, no fill, and a score based on every pixel you paint.
+
+A later paragraph says you choose from 50 meticulously abstracted paintings from art history. That is the store’s count. This guide does not turn store screenshots into a full catalog. The [painting](/painting) page says which titles are actually legible in those frames.
+
+| Fact | What the 12 Nov 2026 check showed |
+| --- | --- |
+| Release | Nov 13, 2026. `coming_soon: true` on the full game. |
+| Developer | Playful Systems LLC |
+| Publishers | Playful Systems LLC, ENJOYN GAMES |
+| Price | `is_free: false`. `package_groups` was empty, so no number was in that payload. |
+| Platforms | Windows. Mac and Linux are false. |
+| Genres | Action, Casual |
+| Players | Single-player, Multi-player, PvP, Online PvP, Shared/Split Screen PvP, Shared/Split Screen. Also Steam Cloud, Steam Leaderboards, Family Sharing. |
+| Languages | The full-game language string is English, Japanese. This wiki is English only. |
+| Support | https://playfulsystems.com/ and jonah@playfulsystems.com |
+| Official site | https://sloppyforgeries.com/ |
+
+## Release and the free demo
+
+The full game was still upcoming on 12 November 2026. 13 November 2026 is the planned unlock.
+
+The same store page says a free demo is available. That was still true in the API that day. The demo is its own app, **5274180**, named Sloppy Forgeries Demo. `is_free` is true, `type` is demo, `coming_soon` is false, and `release_date` is 18 Oct 2026. Its `fullgame` field points at AppID 3030560. Platforms are Windows only. The demo’s requirement block only says a 64-bit processor and operating system. Its language string is English, marked for full audio. The full game’s language string is the separate pair English, Japanese, without that audio note.
+
+The full-game payload’s `dlc` array also lists **5039270**. That app is named Sloppy Forgeries Playtest. Its type field is `game`, not a content pack. `coming_soon` is false, the date is 2 Oct 2026, and `is_free` is false. This page does not describe it as downloadable bonus content, and it does not invent a price for it.
+
+<Callout kind="note" title="Demo checked, not played">
+“Free demo available” is the store sentence on 12 Nov 2026, backed by demo AppID 5274180. Nothing on this site is a session report from that build.
+</Callout>
+
+## The PC the store asks for
+
+Both the minimum and recommended blocks say an external mouse is required. The game is Windows only.
+
+| | Minimum | Recommended |
+| --- | --- | --- |
+| OS | Windows 7, 64-bit | Windows 10, 64-bit |
+| CPU | Intel Core i3 dual core | Intel Core i5–i7 quad core |
+| Memory | 4 GB RAM | 16 GB RAM |
+| Graphics | NVIDIA GeForce GTS 450 or AMD equivalent | NVIDIA GeForce GTX 750 Ti or AMD equivalent |
+| Storage | 500 MB | 500 MB |
+| Notes | External mouse | External mouse |
+
+`required_age` is 0. The ratings object included DEJUS 6, Steam Germany 12, and IGRS 3 with the descriptor “Interaksi Daring.” No ESRB rating was in that payload. The content-descriptor list was empty.
+
+## Where the rest of the guide goes
+
+**Paint.** A round is a timed copy with a short palette, three coarse brushes, no undo, and no fill. Assist tools, a tablet note, the piano tracks, and the 50-count catalog are on [Painting](/painting).
+
+**Score.** The store’s phrase is pixel-by-pixel, in real time, using every pixel you paint. Steam Leaderboards are listed per painting. The formula is not printed. That limit is the whole point of [Accuracy](/accuracy).
+
+**Party.** Online uses a join code. Local uses two mice on one computer. The store’s examples of random variants are Tiny Brush, Upside Down, and Pointillism. Details and the 7-friends / 8-people wording are on [Multiplayer](/multiplayer).
+
+Single-player lines on the store, kept here so the party page does not have to repeat them:
+
+- A masterpiece catalog tracks forgery scores and stats across the 50 paintings.
+- A painting archive stores every forgery locally.
+- Time-lapse replays cover each stroke.
+- Replays can be downloaded and shared as animated GIFs.
+- Keyboard shortcuts exist for some actions. The store does not print the key list. The sentence jokes that it is not “everything” or “most things.”
+- Wacom tablet support is listed, including two tablets at once.
+- Music is described as 8 or more randomly selected fast piano pieces that end on a dramatic note. The credit line is Bernd Krueger, source piano-midi.de.
+
+## Lines the store page quotes
+
+The store’s review field, not a score this site measured:
+
+- Paste Magazine: “It’s simple and hypercompetitive but also an absolute hoot. I just adore this game.”
+- Game Informer: “Fans of Drawful and Draw Something have a new party game to look forward to in Sloppy Forgeries.”
+- GameSpot: “If you equally enjoy fine art and crude MS Paint drawings, Sloppy Forgeries is a fun, quick, competitive mash-up of the two.”
+
+The official site, read the same day, says the game has been shown at festivals and names a Video Game Chronicle Award at BitSummit 2026 and Best in Show at Miami @ Play 2018. The exhibition list itself lives on that site. This page does not copy it out.
+
+<Callout kind="warn" title="Left unpublished on purpose">
+A numeric price. A per-painting time table. A scoring formula. A complete list of the 50 paintings. A complete variant list. Live leaderboard numbers. A redeem code. If the 13 November client prints a figure this page does not have, the client is the newer source.
+</Callout>

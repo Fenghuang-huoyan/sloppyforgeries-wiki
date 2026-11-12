@@ -1,0 +1,86 @@
+---
+title: "Sloppy Forgeries Accuracy — Pixel-by-Pixel Scoring"
+description: "Sloppy Forgeries accuracy, as Steam describes it: every pixel, a live bar, per-painting leaderboards. No invented formula and no live leaderboard numbers."
+h1: "Sloppy Forgeries accuracy is scored pixel by pixel"
+section: "Accuracy"
+order: 3
+verifiedAgainst: "Steam appdetails and the English store page for AppID 3030560 on 12 Nov 2026, including the store screenshots saved that day. No leaderboard was opened in a client."
+quickAnswer:
+  - "Sloppy Forgeries measures accuracy pixel by pixel, in real time. The store says the score is based on every pixel you paint, and that a bar moves up and down while you paint."
+  - "Store screenshots label that readout “% ACCURACY.” One results frame also shows a letter grade and a previous-high label. This page describes those labels and does not treat the numbers in the images as current records."
+  - "Steam Leaderboards are a listed feature: best accuracy per painting, plus an in-game gallery of the best forgeries. The masterpiece catalog tracks scores across the 50 paintings. No formula is printed."
+  - "There is no undo and no fill, so the pixels you leave down are the pixels the score can see. This site does not invent weights, a curve, or a grade threshold."
+sources:
+  - label: "Steam store — Sloppy Forgeries"
+    url: "https://store.steampowered.com/app/3030560/Sloppy_Forgeries/"
+  - label: "Official site"
+    url: "https://sloppyforgeries.com/"
+related:
+  - href: "/guide"
+    label: "Guide"
+  - href: "/painting"
+    label: "Painting"
+  - href: "/multiplayer"
+    label: "Multiplayer"
+banner: "/images/official/steam/ss-03.jpg"
+bannerAlt: "Steam screenshot of a Sloppy Forgeries Mona Lisa result: the reference painting beside a simplified copy, a percent score, and a letter grade"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+The store’s claim for **Sloppy Forgeries** is narrow and specific: accuracy is measured pixel by pixel, in real time, from the pixels you paint. That is the whole published rule. The [painting](/painting) page covers the tools that feed those pixels. The [guide](/guide) covers the release. Party standings are on [multiplayer](/multiplayer).
+
+## The sentences that count
+
+From the short description: one of the few drawing games that measures accuracy pixel-by-pixel in real time.
+
+From the feature list: a score based on every pixel you paint.
+
+From the painting-features list: real-time feedback, a bar that goes up and down as you paint.
+
+From the single-player list: the masterpiece catalog tracks forgery scores and stats across 50 masterpieces. Steam Leaderboards are for the best accuracy score per painting, and for a gallery of the best forgeries in-game.
+
+The official site repeats the pixel-by-pixel sentence and the count of 50. It does not add a formula.
+
+## What the store images show
+
+The screenshots are promotional frames, checked 12 Nov 2026. They show the shape of the UI. They are not a scrape of a live board.
+
+- During a round, a label reads “% ACCURACY” beside the copy, with a horizontal bar.
+- When time expires, a large percent sits between the reference painting and the copy. One Mona Lisa frame also shows a letter grade and the label “PREV. HI.”
+- A two-player results frame shows a percent on each side and a WINNER banner over the higher one. The plaque in that frame is *Starry Night*.
+- An eight-row results frame ranks players with a percent each, under “ROUND 1 OF 1.”
+- A leaderboard frame shows tabs LEADERBOARD, FRIENDS, GLOBAL, and AROUND USER, a grid of ranked forgeries, and a percent on each card. The painting title in that frame is *Suprematist Composition: Airplane Flying*.
+
+<Callout kind="warn" title="Those percents stay in the pictures">
+This page does not reprint the percentages, the letter, or the previous-high figure as records. A store image can be staged. No client was opened, and Steam leaderboards were not read. Quoting a number from a screenshot would pretend this wiki has a live table.
+</Callout>
+
+## What is not in the source
+
+No page checked on 12 Nov 2026 prints:
+
+- a weight per color, per region, or per brush size
+- whether untouched canvas counts the same as a wrong color
+- the percent that earns a given letter
+- how “previous high” is stored, or whether it is local, friends-only, or global
+- a season, a reset, or a numerical top score
+
+The bar “goes up and down,” which means the store allows the feedback to fall while you are still painting. It does not say which kind of stroke makes it fall. Guessing that a stroke outside the subject lowers the score is a reading of “every pixel,” not a rule the page wrote down. The safe statement is the one Steam printed: every painted pixel is in the score, and the bar can move either way while you work.
+
+No undo and no fill sit next to that rule. You cannot take a pixel back with an undo button the store says you do not have, and you cannot flood a region with a fill the store says you do not have. Brush size still matters because the three sizes are the tool list, not because a hidden multiplier was published.
+
+## Leaderboards, catalog, archive
+
+Three different store lines are easy to mash together. They stay separate here.
+
+| Feature | What the store says it holds |
+| --- | --- |
+| Masterpiece catalog | Forgery scores and stats across 50 masterpieces. |
+| Steam Leaderboards | Best accuracy per painting, and a gallery of the best forgeries, in the game. |
+| Painting archive | Every forgery you make, stored locally. |
+| Replays | Time-lapse of each stroke, and a GIF download to share. |
+
+“Best accuracy score per-painting” is the leaderboard unit the store names. It does not say the board is a single number for your whole account. The leaderboard screenshot’s GLOBAL and FRIENDS tabs are UI labels in that image. This page does not describe filter rules beyond those words.
+
+The catalog count of 50 matches the painting-select copy. It is not a promise that every painting is on a public board on day one. The full game was still marked coming soon on the day of this check.

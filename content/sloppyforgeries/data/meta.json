@@ -1,0 +1,12 @@
+{
+  "release": "13 Nov 2026",
+  "price": "Coming soon",
+  "priceNote": "Steam date Nov 13, 2026. On 12 Nov 2026 appdetails still had coming_soon true, and package_groups was empty, so no price was printed.",
+  "players": "Join code",
+  "playersNote": "Online party play. Steam says up to 7 friends. The official site says lobbies of up to 8 people. Both checked 12 Nov 2026.",
+  "reviews": "Windows",
+  "reviewsNote": "Mac and Linux are false. Minimum and recommended notes both require an external mouse.",
+  "modes": "Free demo",
+  "modesNote": "The store says a free demo is available. Demo AppID 5274180 is free, dated 18 Oct 2026, coming_soon false. Checked 12 Nov 2026.",
+  "platforms": "Windows"
+}
